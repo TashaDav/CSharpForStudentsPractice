@@ -243,3 +243,37 @@ class Animal
 
     //если не включать слова public, protected, private, - по умолчанию задается значение private.
 }
+~~~
+
+Пример2:
+~~~
+//определим несколько закрытых и открытых полей в классе Animal, затем попытаемся обратиться к ним из класса Zoo.
+
+class Animal
+{
+    public string kindPfAnimal;
+    public string name;
+    public int numberOfLegs;
+    public int height;
+    public int length;
+    public string color;
+    bool hasTail;
+    protected bool isMammal;
+    private bool spellingCorrect;
+}
+class Zoo
+{
+    Animal a = new Animal ();
+    //Следующая строка будет выполнена успешно, поскольку классу "Zoo" разрешено обращаться к открытым полям в классе "Animal".
+    //
+    a.kindOfAnimal = "Kangaroo";
+    //Обе следующие строки НЕ будут выполнены, поскольку классу "Zoo" не разрешено обращаться к закрытым или защищенным полям.
+    //
+    a.isMammal = false;
+    // Попытка обращения к защищенному методу.
+    //
+    a.spellingCorrect = true;
+    // Попытка обращения к закрытому методу.
+    //
+}
+~~~
