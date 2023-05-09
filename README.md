@@ -196,3 +196,50 @@ schoolKid.age = 13;
 
 schoolKid.firstName = "Petr" означает: <Petr становится значением поля firstName *(Имя)объекта* schoolKid>. 
 
+### Закрытые, защищенные и открытые поля.
+
+Объекты одного класса могут быть полями в другом классе. Как показано в примере ниже, мы можем решить, должны ли другие классы иметь к ним доступ.
+
+Пример:
+
+~~~
+class Animal
+{
+    string kindOfAnimal;
+    string name;
+    int numberOfLegs;
+    int height;
+    int length;
+    string color;
+    bool hasTail;
+    bool isMammal;
+    bool spellingCorrect;
+}
+class MyTestClass
+{
+    Animal myAnimal;
+}
+~~~
+
+Иногда очень важно делать поля закрытыми (*private*), для того, чтобы другой класс не помещал неверные значения в поля и не нарушал работу программы. </br>
+Использование полей *private*, *protected* и *public* определяет степень защиты объектов класса.
+
+Добавим в начало описания поля еще одно слово.
+
+Пример:
+
+~~~
+class Animal
+{
+    public string kindOfAnimal;
+    public string name;
+    public int numberOfLegs;
+    public int height;
+    public int length;
+    public string color;
+    bool hasTail;
+    protected bool isMammal;
+    private bool spellingCorrect;
+
+    //если не включать слова public, protected, private, - по умолчанию задается значение private.
+}
