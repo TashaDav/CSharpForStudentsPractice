@@ -146,3 +146,38 @@ class Animal
 }
 ~~~
 
+### Поля и объекты
+
+Выше в примере мы объяснили ПК, что все объекты класса Animal имеют выше перечисленные поля. Теперь попробуем создать экзепляр, представляющий определенный объект класса Animal, и сообщим ПК некоторую информацию об этом объекте, присвоив значения каждому полю.
+
+Пример:
+~~~
+Animal Barsik;
+Barsik = new Animal;
+Barsik.kindOfAnimal = "Cat";
+Barsik.name = "Кот Барсик";
+Barsik.numberOfLegs = 4;
+Barsik.height = 50;
+Barsik.length = 110;
+Barsik.color = "Black";
+Barsik.hasTail = true;
+Barsik.isMammal = true;
+~~~
+
+**Строительный блок: Поля**</br>
+Обычно в классе присутствует одно поле или несколько полей, которые позволяют описывать определенные черты объектов этого класса.
+
+Пример:
+~~~
+class SchoolKid
+{
+    string firstName;
+    string lastName;
+    int age;
+    bool isWideAvake;
+    
+    //string, int, bool - типы
+    //first, last - имена
+    //age, bool - знаяения.
+}
+~~~
